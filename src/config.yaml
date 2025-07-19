@@ -53,10 +53,24 @@ bars:
         "weather",
         "microphone",
         "volume",
+        "pomodoro",
         "notifications",
         "power_menu"
         ]
 widgets:
+  pomodoro:
+      type: "yasb.pomodoro.PomodoroWidget"
+      options:
+        work_duration: 25
+        break_duration: 5
+        long_break_duration: 15
+        long_break_interval: 4
+        auto_start_breaks: true
+        auto_start_work: true
+        sound_notification: true
+        show_notification: true
+        callbacks:
+          on_left: "toggle_menu"
   home:
     type: "yasb.home.HomeWidget"
     options:
